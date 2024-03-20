@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<style>
+    .abcd{
+        object-fit: cover; /*Used to fit inside image, covers the container in the image*/
+        object-fit: contain; /*Image width is contained in the class*/
+        object-position: left;/*Used to view left side of image*/
+        object-position: bottom;
+    }
+    .blocks{
+        display: block;/*Takes entire line*/
+        display: inline-block;/*Takes space as needed only*/
+        display: inline;/*Text element*/
+        vertical-align: top;/*Align the block at top*/
+        line-height: normal;/*space between lines*/
+    }
+    /*CSS Grid for complex two-dimensional layouts such as overall page structure, magazine-style layouts, and aligning items in both rows and columns.*/
+    /*Use Flexbox for one-dimensional layouts such as navigation menus, lists, and aligning items within a container along a single axis.*/
+    .grids{
+        display: grid;
+        grid-template-columns: 100px 100px;/*grid columns*/
+    }
+    .grids2{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 500px 200px 300px;/*if no space goes downward and creates another row*/
+        column-gap: 20px; /*Gap between columns*/
+        row-gap: 10px;
+    }
+    .grids3{
+        margin-top: 30px;
+        display: grid;
+        grid-template-columns: 1fr 2fr 100px;/*takes remaining space*/
+
+    }
+        /*Use Flexbox for one-dimensional layouts such as navigation menus, lists, and aligning items within a container along a single axis.*/
+    .flexs{
+        margin-top: 30px;
+        display: flex;   
+        flex-direction: row;  /*All elements in a single row*/
+    }
+    .flexs .div1,.flexs .div2{
+        flex: 1;/*equivalent of fr in grid*/
+    }
+    .flexs2{
+        margin-top: 30px;
+        display: flex;   
+        flex-direction: row;
+        justify-content: space-between;/*align horizontally*/
+        align-items: center;/*align vertically*/
+        height: 100px;
+    }
+    .flexs2 .div1,.flexs2 .div2,.flexs2 .div3{
+        width: 100px;
+    }
+</style>
+<!-- <img class="abcd" src="">
+<div class="blocks"></div> -->
+<div class="grids">
+    <div class="div1" style="background-color: red;">Sajesh</div>
+    <div class="div2" style="background-color: blue;">Sanjeev</div>
+</div>
+<div class="grids2">
+    <div class="div1" style="background-color: green;">Sajesh</div>
+    <div class="div2" style="background-color: purple;">Sanjeev<p>aa</p></div>
+    <div class="div3" style="background-color: yellow;">Saurab</div>
+    <div class="div4" style="background-color: pink;">Sujal</div>
+</div>
+<div class="grids3">
+    <div class="div1" style="background-color: red;">Sajesh</div>
+    <div class="div2" style="background-color: blue;">Sanjeev</div>
+    <div class="div2" style="background-color: green;">Sujal</div>
+</div>
+<div class="flexs">
+    <div class="div1" style="background-color: red;">Sajesh</div>
+    <div class="div2" style="background-color: blue;">Sanjeev</div>
+</div>
+<div class="flexs2">
+    <div class="div1" style="background-color: red;">100px</div>
+    <div class="div2" style="background-color: blue;">100px</div>
+    <div class="div3" style="background-color: green;">100px</div>
+</div>
+</body>
+</html>
